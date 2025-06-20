@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app-main-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-radius: 10px 10px 16px 16px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-logo {
+  color: #FF3B3B;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  color: #888;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  color: #4A3AFF;
+  font-weight: 700;
+}
+
+.navbar-social {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navbar-social a {
+  color: #888;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.navbar-social a:hover {
+  color: #4A3AFF;
+}
+
+/* Hero Section */
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 24px 0 24px;
+  min-height: 500px;
+}
+
+.hero-left {
+  width: 50%;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-desc {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.hero-btn {
+  background: #FF3B3B;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.hero-btn:hover {
+  background: #d32f2f;
+}
+
+/* Phone mockup */
+.hero-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone-mockup {
+  position: relative;
+  width: 290px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.phone-mockup img {
+  position: absolute;
+  top: 52px;
+  left: 22px;
+  width: 246px;
+  height: 346px;
+  border-radius: 32px;
+  object-fit: cover;
+  z-index: 1;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+}
+
+.phone-mockup::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('./assets/phone-ram.png') center/cover no-repeat;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 2rem;
+}
+
+.phone-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 3;
+}
+
+.phone-arrow.left {
+  left: -20px;
+}
+.phone-arrow.right {
+  right: -20px;
+}
+
+.phone-arrow:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Logos Section */
+.logos-section {
+  background: #fff;
+  padding: 48px 0;
+  margin-top: 48px;
+}
+
+.logos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-item span {
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-left {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container,
+  .hero-section,
+  .logos-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .phone-mockup {
+    width: 200px;
+    height: 320px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .logo-item span {
+    font-size: 1.2rem;
+  }
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0 0 12px 12px;
+  }
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+  .hero-section {
+    flex-direction: column;
+    padding: 24px 8px 0 8px;
+    gap: 1.5rem;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+ .phone-mockup {
+  position: relative;
+  width: 290px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden; /* Додаємо це */
+}
+
+/* ... */
+
+@media (max-width: 600px) {
+  .phone-mockup {
+    width: 180px !important;
+    height: 350px !important;
+    margin: 0 auto;
+    overflow: hidden; /* Додаємо це */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .phone-image {
+    width: 140px !important;
+    height: 280px !important;
+    /* Прибрати absolute, top, left */
+    position: static !important;
+    object-fit: cover !important;
+    
+    z-index: 1;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    display: block;
+    margin: 0 auto;
+  }
+}
+  .phone-image {
+    width: 140px !important;
+    height: 280px !important;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+  }
+}
